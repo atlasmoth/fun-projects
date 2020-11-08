@@ -23,7 +23,7 @@ const setupCtx = async () => {
   if(audioCtx.state === "suspended"){
    await  audioCtx.resume()
   }
-   audioCtx.createMediaStreamSource(soundStream).connect(analyzerNode).connect(audioCtx.destination)
+   audioCtx.createMediaStreamSource(soundStream).connect(analyzerNode)
 }
 
 
