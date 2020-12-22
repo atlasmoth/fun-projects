@@ -12,7 +12,7 @@ function drawTree(x, y, angle, length) {
   y1 = y - sin(angle) * length;
   line(x, y, x1, y1);
   if (Math.log(length) > 2.3) {
-    drawTree(x1, y1, random(360 * 5), length * 0.8);
-    drawTree(x1, y1, random(360 * 5), length * 0.8);
+    drawTree(x1, y1, random(180), length * 0.8);
+    drawTree(x1, y1, random(180), length * 0.8);
   }
 }
