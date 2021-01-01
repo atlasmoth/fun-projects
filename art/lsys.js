@@ -1,8 +1,8 @@
 class Pointer {
   x = 400;
   y = 600;
+  step = 20;
 
-  step = 50;
   right = () => {
     const { x, y, step } = this;
     let x1 = x + step * sin(90);
@@ -57,7 +57,7 @@ function turtle() {
 function* gen() {
   let counter = 0;
   const grammars = ["l", "u", "r"];
-  while (counter < 100) {
+  while (counter < 200) {
     yield grammars[randomNumber(2)];
     counter++;
   }
