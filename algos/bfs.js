@@ -50,4 +50,22 @@ function bfs(start) {
   }
 }
 
-bfs("PHX");
+// bfs("PHX");
+
+function dfs(start, visited = new Set()) {
+  console.log(start);
+  visited.add(start);
+  const destinations = adjacenyList.get(start);
+
+  for (const child of destinations) {
+    if (child === "BKK") {
+      console.log(`DFS found Bangkok in steps`);
+      return;
+    }
+    if (!visited.has(child)) {
+      dfs(child, visited);
+    }
+  }
+}
+
+dfs("BKK");
