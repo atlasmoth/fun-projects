@@ -1,0 +1,51 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+:root {
+  font-size: 12px;
+  height: 100%;
+}
+body {
+  height: inherit;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Ubuntu, "Helvetica Neue", sans-serif;
+}
+.container {
+  display: grid;
+  grid-template-rows: 60px auto 60px;
+  grid-template-areas: "header" "content" "footer";
+  height: 100%;
+}
+header {
+  grid-area: header;
+}
+footer {
+  grid-area: footer;
+}
+main {
+  grid-area: content;
+}
+
+aside {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    grid-template-rows: 60px auto;
+    grid-template-columns: 200px 600px auto;
+    grid-template-areas: "header content aside";
+  }
+  aside {
+    display: block;
+  }
+  footer {
+    display: none;
+  }
+}
