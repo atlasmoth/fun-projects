@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+}
+:root {
+  height: 100px;
+  font-size: 12px;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}

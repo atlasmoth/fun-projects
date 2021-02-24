@@ -1,0 +1,20 @@
+{
+  "name": "newreact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {
+    "snowpack": "^3.0.13"
+  }
+}
