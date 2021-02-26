@@ -9,13 +9,14 @@ export default function Tweets() {
   useEffect(() => {
     const target = doc.current;
     let options = {
-      rootMargin: "600px 0px 0px 0px",
+      rootMargin: "-650px 0px 0px 0px",
       threshold: 1,
     };
     const callback = (entries) => {
       const [targetObj] = entries;
 
       if (!targetObj.isIntersecting) {
+        console.log("We gotta hit!!");
         fetch(`https://jsonplaceholder.typicode.com/comments`)
           .then((res) => {
             if (res.ok && res.status === 200) {
@@ -25,9 +26,8 @@ export default function Tweets() {
             }
           })
           .then((data) => {
-            console.log(data);
             setInterrupt(null);
-            setTweets(data);
+            setTweets((extant) => [...extant, ...data]);
           })
           .catch(() => {
             setInterrupt("Error connecting to server");
