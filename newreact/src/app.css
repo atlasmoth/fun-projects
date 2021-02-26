@@ -1,3 +1,4 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css";
 *,
 *::before,
 *::after {
@@ -13,8 +14,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem;
+.home {
+  padding-bottom: 2000px;
 }
+/* .intersection {
+} */
