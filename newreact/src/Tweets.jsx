@@ -16,7 +16,6 @@ export default function Tweets() {
       const [targetObj] = entries;
 
       if (!targetObj.isIntersecting) {
-        console.log("We gotta hit!!");
         fetch(`https://jsonplaceholder.typicode.com/comments`)
           .then((res) => {
             if (res.ok && res.status === 200) {
