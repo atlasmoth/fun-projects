@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 export default function Form() {
   const [comment, setComment] = useState("");
+  console.log("I have been called chale");
   return (
     <form>
       <div className="control">

@@ -42,7 +42,7 @@ export default function Tweets() {
     };
   }, []);
   return (
-    <div className="container intersection" ref={doc}>
+    <div className="main-content intersection" ref={doc}>
       {tweets.length > 0 &&
         tweets.map((item) => (
           <Tweet
